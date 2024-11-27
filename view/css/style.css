@@ -1,0 +1,155 @@
+/* Geral */
+body {
+    background-color: #212529; /* Cor de fundo escura */
+    color: #e9ecef; /* Texto claro */
+    font-family: Arial, sans-serif;
+}
+
+/* Container Principal */
+.container {
+    padding-top: 2rem;
+}
+
+/* Estilização do Cabeçalho */
+h1 {
+    font-size: 2.5rem;
+    color: #f8c94d; /* Dourado para o cabeçalho */
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.125rem;
+    color: #e9ecef; /* Texto claro */
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    background-color: #343a40; /* Fundo do card escuro */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 300px; /* Tamanho fixo para manter o padrão dos cards */
+    object-fit: cover; /* Faz com que a imagem se ajuste ao card */
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #f8c94d; /* Dourado para o título */
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #e9ecef; /* Texto claro */
+}
+
+/* Estilização do Footer */
+footer {
+    background-color: #343a40;
+    color: #e9ecef; /* Texto claro */
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Detalhes Dourados */
+.circle-gold {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f8c94d; /* Dourado */
+    display: inline-block;
+}
+
+/* Estilização do Cabeçalho */
+header {
+    background-color: #212529; /* Fundo escuro */
+    padding: 1rem 0;
+}
+
+header .navbar {
+    background-color: #343a40; /* Fundo do menu escuro */
+}
+
+header .navbar-brand {
+    color: #f8c94d; /* Dourado para o texto da marca */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .navbar-nav .nav-link {
+    color: #e9ecef; /* Texto claro */
+}
+
+header .navbar-nav .nav-link:hover {
+    color: #f8c94d; /* Dourado ao passar o mouse */
+}
+
+/* Estilização dos Formulários */
+form {
+    background-color: #343a40; /* Fundo escuro dos formulários */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+/* Inputs */
+form input,
+form select,
+form textarea {
+    background-color: #495057; /* Fundo escuro dos campos */
+    color: #e9ecef; /* Texto dos campos */
+    border: 1px solid #6c757d; /* Borda cinza escura */
+    border-radius: 5px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #f8c94d; /* Dourado na borda ao focar */
+    box-shadow: 0 0 0 0.2rem rgba(248, 201, 77, 0.25); /* Sombra dourada */
+}
+
+/* Botões */
+form button {
+    background-color: #f8c94d; /* Dourado */
+    color: #212529; /* Texto escuro */
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+form button:hover {
+    background-color: #e6b850; /* Dourado mais escuro ao passar o mouse */
+}
+
+/* Estilização do Input de Arquivo (Selecionar imagem) */
+.form-control-file {
+    background-color: #495057; /* Fundo escuro do campo de seleção de arquivo */
+    color: #e9ecef; /* Texto claro */
+}
+
+/* Placeholder branco para campos de entrada */
+.form-control::placeholder {
+    color: #ffffff; /* Cor branca para o texto do placeholder */
+    opacity: 1; /* Garante que a opacidade do placeholder seja total */
+}
+
+.form-control-file::placeholder {
+    color: #ffffff; /* Cor branca para o texto do placeholder */
+    opacity: 1; /* Garante que a opacidade do placeholder seja total */
+}

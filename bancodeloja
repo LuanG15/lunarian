@@ -1,0 +1,81 @@
+-- --------------------------------------------------------
+-- Servidor:                     127.0.0.1
+-- Versão do servidor:           10.1.33-MariaDB - mariadb.org binary distribution
+-- OS do Servidor:               Win32
+-- HeidiSQL Versão:              9.5.0.5196
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+-- Copiando estrutura do banco de dados para ecommerce_luminarias
+CREATE DATABASE IF NOT EXISTS `ecommerce_luminarias` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `ecommerce_luminarias`;
+
+-- Copiando estrutura para tabela ecommerce_luminarias.luminarias
+CREATE TABLE IF NOT EXISTS `luminarias` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `preco` decimal(10,2) NOT NULL,
+  `url_imagem` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
+
+-- Copiando dados para a tabela ecommerce_luminarias.luminarias: ~25 rows (aproximadamente)
+/*!40000 ALTER TABLE `luminarias` DISABLE KEYS */;
+INSERT INTO `luminarias` (`id`, `nome`, `preco`, `url_imagem`) VALUES
+	(1, 'Luminária Galaxy Lua Cheia 3D Abajur', 149.90, '1.webp'),
+	(2, 'Luminária Pendente 6 Cabeças Dourada', 399.00, '2.webp'),
+	(3, 'Lustre Pendente Yeats 130cm Sobrepor', 599.00, '3.webp'),
+	(4, 'Árvore Luminária LED Japão 123Útil', 179.00, '4.webp'),
+	(5, 'Arandela Industrial Retro Nordic Escovado', 199.90, '5.webp'),
+	(6, 'Luminária Criativa Foguete LED', 229.00, '6.webp'),
+	(7, 'Luminária Pendente Regência Real Preto, 110V', 450.00, '7.webp'),
+	(8, 'Luminária Capivara LED Luz Quente', 129.90, '8.webp'),
+	(9, 'Luminária Pac-Man LED com Lâmpada', 99.90, '9.webp'),
+	(10, 'Abajur Luminária Cerâmica para Quarto e Sala', 129.00, '10.webp'),
+	(11, 'Luminária de Teto LED Design Minimalista para Sala', 349.90, '11.webp'),
+	(12, 'Luminária Pendente Minimalista Oval LED Preto', 289.90, '12.webp'),
+	(13, 'Luminária Playstation Icons LED Hug', 159.00, '13.webp'),
+	(14, 'Luminária Pendente Led Cone Cristal Dourado', 349.00, '14.webp'),
+	(15, 'Luminária para Sala, Cozinha e Escritório', 249.90, '15.webp'),
+	(16, 'Luminária de Teto Suspensa Curvo Moderno Dourado', 499.00, '16.webp'),
+	(17, 'Luminária Pendente Eclipse Elegante', 399.90, '17.webp'),
+	(18, 'Luminária Suspensa Esfera Glow 2 Esferas, Luz Quente', 229.90, '18.webp'),
+	(19, 'Luminária de Parede Nordic LED Preto', 179.90, '19.webp'),
+	(20, 'Luminária de Teto Orbital LED Quente', 499.00, '20.webp'),
+	(21, 'Luminária Serpente LED', 149.90, '21.webp'),
+	(22, 'Luz Noturna LED Astronauta Lunar', 89.90, '22.webp'),
+	(23, 'Ornamento Lunar Bohemiano em Acrílico', 79.90, '23.webp'),
+	(24, 'Luminária Noturna Axolotl Silicone com Timer USB Recarregável', 119.90, '24.webp'),
+	(25, 'Luz Noturna Tulipa LED em Cúpula de Vidro', 99.00, '25.webp');
+/*!40000 ALTER TABLE `luminarias` ENABLE KEYS */;
+
+-- Copiando estrutura para tabela ecommerce_luminarias.usuarios
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `Usuario_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Usuario_Nome` varchar(100) NOT NULL,
+  `Usuario_Email` varchar(100) NOT NULL,
+  `Usuario_Nascimento` date NOT NULL,
+  `Usuario_Senha` varchar(255) NOT NULL,
+  `Usuario_Foto` varchar(255) NOT NULL,
+  PRIMARY KEY (`Usuario_ID`),
+  UNIQUE KEY `Usuario_Email` (`Usuario_Email`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+-- Copiando dados para a tabela ecommerce_luminarias.usuarios: ~4 rows (aproximadamente)
+/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` (`Usuario_ID`, `Usuario_Nome`, `Usuario_Email`, `Usuario_Nascimento`, `Usuario_Senha`, `Usuario_Foto`) VALUES
+	(1, 'SunRaku', 'sunrakupenciglon@gmail.com', '2005-06-20', 'f7709f6b50ce97fdedf40a1e83c7fba9', '211939e6173c67ee678c78760988f8a5.webp'),
+	(3, 'BeiÃ§ola', 'beicinho@gmail.com', '1972-06-10', 'd3d11b08d9873b827c7089007237f19e', 'fd13b58e23437a3db6b1f8e11743b9c3.jfif'),
+	(4, 'Baldwin IV', 'baldwinquarto@gmail.com', '1976-02-14', 'e64a7415700398f84bfd3e428fbff772', '1267130838b4886bf886aaec22548b0d.jpeg'),
+	(5, 'Lala Satalin Deviluke', 'lala@gmail.com', '0000-00-00', 'ca41af8122092055bf8d9f354d1f2da5', '296703f172d78c8c68b15e49aafeffc2.webp');
+/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
